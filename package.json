@@ -1,0 +1,32 @@
+{
+  "name": "namaste-react-practice",
+  "version": "1.0.0",
+  "description": "This is a live course",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kashif",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "main": "App.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KashifAhmad1789/Namaste-React-Practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KashifAhmad1789/Namaste-React-Practice/issues"
+  },
+  "homepage": "https://github.com/KashifAhmad1789/Namaste-React-Practice#readme"
+}
