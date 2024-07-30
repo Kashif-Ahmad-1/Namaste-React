@@ -22,12 +22,12 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = ()=>{
+const RestaurantCard = (props)=>{
   return(
     <div className="res-card">
       <img className="res-logo" src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-      <h3>Shama Dhaba</h3>
-      <h4>Biryani</h4>
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
       <h4>Rating : 4.0</h4>
       <h4>38 minutes</h4>
     </div>
@@ -41,12 +41,9 @@ const Body = () =>{
         Search
       </div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard resName="meghna Food" cuisine="Biryani, Tasty Food"/>
+        <RestaurantCard resName="KFC" cuisine="Burger, Fast Food"/>
+        
       </div>
     </div>
   )
