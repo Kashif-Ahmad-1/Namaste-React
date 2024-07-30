@@ -1,31 +1,62 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
         <img
           className="logo"
-          src="https://img.freepik.com/premium-vector/fast-food-logo-template-design-vector_20029-840.jpg"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
         />
       </div>
       <div className="nav-items">
         <ul>
           <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Login</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
         </ul>
       </div>
     </div>
   );
 };
 
+const RestaurantCard = ()=>{
+  return(
+    <div className="res-card">
+      <img className="res-logo" src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+      <h3>Shama Dhaba</h3>
+      <h4>Biryani</h4>
+      <h4>Rating : 4.0</h4>
+      <h4>38 minutes</h4>
+    </div>
+  )
+}
+
+const Body = () =>{
+  return(
+    <div className="body">
+      <div className="search">
+        Search
+      </div>
+      <div className="res-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  )
+}
+
 const AppLayout = ()=>{
   return(
     <div className="app">
-      <HeaderComponent />
+      <Header />
+      <Body />
     </div>
   )
 }
