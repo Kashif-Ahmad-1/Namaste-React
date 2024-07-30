@@ -1,23 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Title = () => (
-  <h1 className="head" tabIndex="5">
-    Namaste React using JSX 🚀
-  </h1>
-);
-
-// React Fragment - behaves like an empty tag
-const HeadingComponent = () => (
-  <>
-    <div id="container">
-      <Title />
-      <h1 className="heaidng">Namaste React Fucntional Component</h1>
+const HeaderComponent = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://img.freepik.com/premium-vector/fast-food-logo-template-design-vector_20029-840.jpg"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Login</li>
+        </ul>
+      </div>
     </div>
-    <div id="container-2"></div>
-  </>
-);
+  );
+};
+
+const AppLayout = ()=>{
+  return(
+    <div className="app">
+      <HeaderComponent />
+    </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);

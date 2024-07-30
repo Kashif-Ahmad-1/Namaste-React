@@ -1,3 +1,24 @@
 #heading {
     color: red;
+    
+}
+.logo{
+    width: 200px;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+    
+} 
+
+.nav-items > ul >li{
+    padding: 10px;
+    margin: 10px;
+    
+    
 }
