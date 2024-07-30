@@ -32,13 +32,21 @@ const Header = () => {
  */
 const RestaurantCard = (props)=>{
   const {resData} = props;
+
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    costForTwo,
+    deliveryTime,
+  } = resData?.info;
   return(
     <div className="res-card">
-      <img className="res-logo" src={"https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" + resData.info.cloudinaryImageId} />
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines}</h4>
-      <h4>Rating : 4.0</h4>
-      <h4>38 minutes</h4>
+      <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
+      <h3>{name}</h3>
+      <h4>{cuisines}</h4>
+      <h4>{costForTwo}</h4>
+      <h4>{deliveryTime}</h4>
     </div>
   )
 }
@@ -1050,7 +1058,16 @@ const Body = () =>{
         Search
       </div>
       <div className="res-container">
-        <RestaurantCard resData={resObj}/>
+        <RestaurantCard resData={resObj[0]}/>
+        <RestaurantCard resData={resObj[1]}/>
+        <RestaurantCard resData={resObj[2]}/>
+        <RestaurantCard resData={resObj[3]}/>
+        <RestaurantCard resData={resObj[4]}/>
+        <RestaurantCard resData={resObj[5]}/>
+        <RestaurantCard resData={resObj[6]}/>
+
+
+
         {/* <RestaurantCard resName="KFC" cuisine="Burger, Fast Food"/>
          */}
       </div>
