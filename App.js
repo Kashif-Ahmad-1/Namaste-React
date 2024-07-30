@@ -140,7 +140,7 @@ const RestaurantCard = (props)=>{
 //   }
 // };
 
-const resObj = [{
+const resList = [{
   "info": {
     "id": "5930",
     "name": "Burger King",
@@ -1058,13 +1058,17 @@ const Body = () =>{
         Search
       </div>
       <div className="res-container">
-        <RestaurantCard resData={resObj[0]}/>
+        {/* <RestaurantCard resData={resObj[0]}/>
         <RestaurantCard resData={resObj[1]}/>
-        <RestaurantCard resData={resObj[2]}/>
-        <RestaurantCard resData={resObj[3]}/>
-        <RestaurantCard resData={resObj[4]}/>
-        <RestaurantCard resData={resObj[5]}/>
-        <RestaurantCard resData={resObj[6]}/>
+        <RestaurantCard resData={resObj[2]}/> */}
+
+
+        {
+          resList.map((restaurant)=>(
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          ))
+        }
+       
 
 
 
