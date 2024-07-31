@@ -21,4 +21,4 @@ const RestaurantCard = (props)=>{
     )
   }
 
-  export default RestaurantCard;
+export default RestaurantCard;
