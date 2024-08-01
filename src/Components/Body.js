@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
-import ShimmerUI from "./Shimmer";
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [listOfRestaurants, setListOfRestraunt] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -24,8 +24,8 @@ const Body = () => {
   };
 
 
-  return listOfRestaurants === 0 ? (
-    <ShimmerUI />
+  return listOfRestaurants == 0 ? (
+    <Shimmer />
   ) : (
     <div className="body">
       <div className="search">
